@@ -15,7 +15,7 @@ const config: any = {
       arbitrumOne: process.env.ARBISCAN_API_KEY || "",
       avalanche: process.env.SNOWTRACE_API_KEY || "",
       bsc: process.env.BSCSCAN_API_KEY || "",
-      gnosis: process.env.GNOSISSCAN_API_KEY || "",
+      xdai: process.env.GNOSISSCAN_API_KEY || "",
       goerli: process.env.ETHERSCAN_API_KEY || "",
       mainnet: process.env.ETHERSCAN_API_KEY || "",
       optimisticEthereum: process.env.OPTIMISM_API_KEY || "",
@@ -41,7 +41,6 @@ const config: any = {
       url: process.env.ETHEREUM_GOERLI_RPC_URL || "",
       chainId: 5
     },
-
     // fvmtestnet: {
     //   url: process.env.FVMTESTNET_RPC_URL || "",
     //   accounts: [process.env.FVMPK || ""],
@@ -52,12 +51,11 @@ const config: any = {
     //   accounts: [process.env.FVMPK || ""],
     //   chainId: 314
     // },
-    // gnosis: {
-    //   allowUnlimitedContractSize: true,
-    //   url: process.env.GNOSISRPCURL || "",
-    //   accounts: [process.env.GNOSISPK || ""],
-    //   chainId: 100,
-    // },
+    gnosis: {
+      url: process.env.GNOSISRPCURL || "",
+      accounts: [process.env.PRIVATE_KEY || ""],
+      chainId: 100,
+    },
     // aurora: {
     //   allowUnlimitedContractSize: true,
     //   url: process.env.AURORA_MAINNET_RPC || "",
@@ -82,6 +80,7 @@ const config: any = {
       default: 0,
       1: 0,
       5: 0,
+      100: 0
     },
   },
   // typechain: {
